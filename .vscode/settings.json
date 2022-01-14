@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "stdlib.h": "c",
+        "stdio.h": "c",
+        "algebra.h": "c",
+        "callfunctions.h": "c",
+        "generatequestions.h": "c",
+        "operations.h": "c"
+    }
+}
