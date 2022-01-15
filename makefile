@@ -1,6 +1,6 @@
 CXX = gcc
 CXXFLAGS = -Wall -g -I.
-LIBS = -lpthread
+LIBS = #-lpthread
 
 APPNAME = main
 

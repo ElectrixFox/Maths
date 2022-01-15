@@ -32,9 +32,29 @@ char* GenerateQuestionType(unsigned int type)
     char* Q = malloc(sizeof(char*) * 16);
     if(type & QUADRATIC)
     {
+        // Generates the quadratic question template.
         strcpy(Q, "a^2 + na + c");
+
+        // Change all the a's to a symbol (e.g. x).
+        {
+            int pos = Find('a', Q, 0);
+            Q[pos] = 'x';
+            
+            pos = Find('a', Q, pos);
+            Q[pos] = 'x';
+        }
+        
+        // Needs to change the n to a number.
         int pos = Find('n', Q, 0);
-        out(pos);
+
+        // Generates a random number and finds a random factor for it.
+        const int Root = rand() % 100;
+        Factors facts = GetFactors(Root);
+
+        out(Root);
+        out(facts.y);
+        
+        //out(pos);
     }
 
     return Q;
